@@ -1,0 +1,150 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #1a1a1a, #3b2f63);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+select, button {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+select {
+  background-color: #4b0082;
+  color: #fff;
+}
+
+button {
+  background-color: #ff69b4;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff85c1;
+}
+
+.card {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: inline-block;
+  max-width: 300px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+img.reversed {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
+
+img.upright {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
+}
+
+img.upright {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.5); /* dorado suave */
+}
+
+img.reversed {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4); /* cian místico */
+  filter: brightness(0.95) contrast(1.1);
+}
+
+
+/*responsive design */
+
+
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button, select {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  img.upright, img.reversed {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  button, select {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.controls label {
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+}
